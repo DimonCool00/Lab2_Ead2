@@ -16,6 +16,19 @@
         <% String username = request.getParameter("username"); %>
         <a>Welcome   <% out.println(username); %> User! You have logged in on out website.</a></td></tr>
 </table>
+<%
+
+username = request.getParameter("username");
+String sessionID = null;
+Cookie[] cookies = request.getCookies();
+if(cookies !=null){
+for(Cookie cookie : cookies){
+if(cookie.getName().equals("Dmitry")) username = cookie.getValue();
+if(cookie.getName().equals("JSESSIONID")) sessionID = cookie.getValue();
+}
+}
+%>
+<h3>Hi <%=username %>, Login successful. Your Session ID=<%=sessionID %></h3>
 <a href="index.jsp">Home</a>
 </body>
 </html>

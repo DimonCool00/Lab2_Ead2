@@ -18,4 +18,21 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <url-pattern>/config/demo</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>filter1</filter-name>
+        <filter-class>kz.iitu.javaee.FIlter1</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filter1</filter-name>
+        <url-pattern>/index</url-pattern>
+    </filter-mapping>
+    <filter>
+    <filter-name>filterә</filter-name>
+    <filter-class>kz.iitu.javaee.filter2</filter-class>
+</filter>
+    <filter-mapping>
+        <filter-name>filter2</filter-name>
+        <url-pattern>/index</url-pattern>
+    </filter-mapping>
+
 </web-app>
